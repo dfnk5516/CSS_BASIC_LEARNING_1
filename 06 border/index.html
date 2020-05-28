@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <template>
+    border : 요소의 '테투리 선'을 지정
+    
+    [속성]
+    border-width : 선의 두께(너비) / 기본값 : medium
+    medium : 중간 두께 / thin : 얇은 두께 / thick : 두꺼운 두께
+    단위 px, em, cm 등 단위로 지정
+    
+    border-style : 선의 종류 / 기본값 : none
+    none : 선 없음 / hidden : 선 없음과 동일(table 요소에서 사용) / solid : 실선(일반선)
+    dotted : 점선 / dashed : 파선 / double : 두 줄선 / groove : 홈이 파여있는 모양(선)
+    ridge : 솟은 모양(선, groove 의 반개) / inset : 요소 전체가 들어간 모양(선) / outest : 요소 전체가 나온 모양(선)
+
+    border-color : 선의 색상 / 기본값 : black
+    transparent : 투명한 선(요소의 배경색이 보임)
+    
+    [기타 속성]
+    border-top border-top-width border-top-style border-top-color
+    border-bottom border-bottom-width border-bottom-style border-bottom-color
+    border-left border-left-width border-left-style border-left-color
+    border-right border-right-width border-right-style border-right-color
+
+    //////////////////////////////////////////
+    크기 증가 현상
+
+    크기가 커지지 않도록 자동 계산 > box-sizing : border-box; 추가하면 자동 계산됨
+  </template>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+  <style>
+    .box{
+      width : 400px;
+      height : 300px;
+      background : orange;
+      border : 10px inset black;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

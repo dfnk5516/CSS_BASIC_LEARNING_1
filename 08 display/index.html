@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <template>
+    display : 요소의 박스 타입(유형, 형태)을 설정
+
+    [속성]
+    block : 블록 요소(div) 등
+    inline : 인라인 요소(span) 등
+    inline-block : 인라인-블록 요소(input 등)
+    기타 : table, table-cell, flex 등
+    none : 요소의 박스 타입이 없음(요소가 사라짐)
+  </template>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+  <style>
+    div{
+      width : 200px;
+      height : 200px;
+      background : tomato;
+      display : flex;
+      justify-content : center;
+      align-items : center;
+    }
+    div.hide{
+      display : none;
+    }
+  </style>
+</head>
+<body>
+<button>Toggle</button>
+<div>요소</div>
+</body>
+<script>
+  const el = document.querySelector('div');
+  const btn = document.querySelector('button');
+  
+  btn.addEventListener('click', ()=>{
+    if(el.classList.contains('hide')) el.classList.remove('hide');
+    else el.classList.add('hide');
+  })
+</script>
+</html>

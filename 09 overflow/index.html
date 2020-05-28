@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <template>
+    overflow : 요소의 크기 이상으로 내용(자식요소)이 넘쳤을 때,
+    내용의 보여짐을 제어 / 기본값 : visible
+
+    [속성]
+    visible : 넘친 부분을 자르지 않고 그대로 보여줌
+    hidden : 넘친 부분을 잘라내고, 보이지 않도록 함
+    scroll : 넘친 부분을 잘라내고, 스크롤바를 이용하여 볼 수 있도록 함
+    auto : 넘친 부분이 있는 경우만 잘라내고, 스크롤바를 이용하여 볼 수 있도록 함
+  </template>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+  <style>
+    .parent{
+      width : 300px;
+      height : 250px;
+      border : 4px solid;
+      overflow : auto;
+    }
+    .parent .child{
+      width : 100px;
+      height : 100px;
+      background : tomato;
+      border : 4px solid red;
+      display : flex;
+      justify-content: center;
+      align-items: center;
+      font-size : 40px;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .parent::-webkit-scrollbar
+    {
+      display: none;
+    }
+    /* Hide scrollbar for IE and Edge */
+    .parent
+    {
+      -ms-overflow-style: none;
+    }
+    /* This example will not work in Firefox, as they dropped the support for hidden scrollbars without functionality (you could use overflow: -moz-scrollbars-none; in old versions). */
+
+    /* optional: show position indicator in red */
+    /* ::-webkit-scrollbar-thumb
+    {
+      background: #FF0000;
+    } */
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+  </div>
+</body>
+</html>
